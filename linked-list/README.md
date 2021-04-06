@@ -1,3 +1,3 @@
 # Pino toteutettuna linkitetyllä listalla
 
-![pic](./pic/linked_list_stack.png)
+![pic](./pic/stack_linked_list.png)
