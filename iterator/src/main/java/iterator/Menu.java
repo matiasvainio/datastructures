@@ -54,10 +54,8 @@ public class Menu {
                     break;
                 case '5':
                     StackIterator<E> itr = s.iterator();
-//                    while (itr.hasNext())
-//                        System.out.println(itr.next());
-
-                    System.out.println(itr);
+                    while (itr.hasNext())
+                        System.out.println(itr.next());
                     break;
                 case '6':
                     break;

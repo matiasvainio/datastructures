@@ -1,6 +1,6 @@
 package iterator;
 
-public class StackIterator<T> {
+public class StackIterator<T> implements Iterator {
     private T current;
     private Stack<T> stack;
 
@@ -14,17 +14,7 @@ public class StackIterator<T> {
     }
 
     public Object next() {
-        Object o = current;
-        stack.pop();
-        current = stack.top;
-        return o;
-    }
-
-    @Override
-    public String toString() {
-        return "StackIterator{" +
-                "current=" + current +
-                ", stack=" + stack +
-                '}';
+        current = stack.pop();
+        return current;
     }
 }

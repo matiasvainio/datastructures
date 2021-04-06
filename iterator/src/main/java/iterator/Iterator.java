@@ -1,2 +1,7 @@
-package iterator;public interface Iterator {
+package iterator;
+
+public interface Iterator {
+    boolean hasNext();
+
+    Object next();
 }
