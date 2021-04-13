@@ -23,6 +23,7 @@ public class Menu {
         tree.insert(22);
 
         tree.inOrder();
+        System.out.println();
         tree.delete(20);
         System.out.println();
         tree.inOrder();

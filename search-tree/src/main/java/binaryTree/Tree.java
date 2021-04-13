@@ -25,6 +25,7 @@ public class Tree {
     }
 
     public void delete(int value) {
+        System.out.println("Poistettava arvo: " + value);
         root = delete(root, value);
     }
 
