@@ -3,9 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package iterator;
-
-import iterator.example.ListItem;
+package linkedList;
 
 /**
  * @author kamaj
@@ -20,11 +18,12 @@ public class Menu {
 
     //main loppuu --------------------------------------------------------------------------
 //printMenu alkaa------------------------------------------------------------------
-    private static <E> void printMenu() {
+    private static void printMenu() {
         char select;
-        Stack<E> s = new Stack<>();// pino-olio
+        Stack s = new Stack(); // pino-olio
         String data; // Pinon data-kenttä
         do {
+
             System.out.println("\n\t\t\t1. Alkion lisääminen.");
             System.out.println("\t\t\t2. Alkion poistaminen.");
             System.out.println("\t\t\t3. Pinon sisältö.");
@@ -36,11 +35,11 @@ public class Menu {
             switch (select) {
                 case '1':
                     System.out.println("Anna alkion sisältö (merkkijono)");
-                    data = Lue.rivi();
-                    s.push((E) data);
+                    data = new String(Lue.rivi());
+                    s.push(data);
                     break;
                 case '2':
-                    E item = s.pop();
+                    String item = s.pop();
                     if (item == null)
                         System.out.println("Pino on tyhjä");
                     else
@@ -53,9 +52,9 @@ public class Menu {
                     System.out.println("Lukumäärä = " + s.getSize());
                     break;
                 case '5':
-                    StackIterator<E> itr = s.iterator();
-                    while (itr.hasNext())
-                        System.out.println(itr.next());
+//                    StackIterator itr = s.iterator();
+//                    while (itr.hasNext())
+//                        System.out.println(itr.next().getData());
                     break;
                 case '6':
                     break;
