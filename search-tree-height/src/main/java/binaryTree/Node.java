@@ -1,11 +1,14 @@
 package binaryTree;
 
+import java.util.Objects;
+
 public class Node {
     private int data, height;
     private Node left, right;
 
     public Node(int data) {
         this.data = data;
+        height = 0;
     }
 
     public void insert(int value) {
@@ -27,13 +30,21 @@ public class Node {
                 right.insert(value);
             }
         }
+
+        // Jos ei löydy lapsisolmuja lisätään korkeutta.
+        // Muuten valitaan kahden alipuun korkeuksista toinen ja lisätään siihen 1.
+        if (left != null && right != null) {
+            height = Math.max(right.getHeight(), left.getHeight()) + 1;
+        } else {
+            height++;
+        }
     }
 
     public void inOrder() {
         if (left != null) {
             left.inOrder();
         }
-        System.out.println(data + ", ");
+        System.out.println(data + " " + height + ", ");
         if (right != null) {
             right.inOrder();
         }

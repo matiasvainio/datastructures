@@ -3,7 +3,6 @@ package binaryTree;
 
 public class Tree {
     private Node root;
-    private Node prev;
 
     public void insert(int value) {
         if (root == null) {
@@ -54,6 +53,8 @@ public class Tree {
 
             subRoot.setLeft(delete(subRoot.getLeft(), subRoot.getData()));
 
+            System.out.println(subRoot.getHeight());
+
         }
         return subRoot;
     }
@@ -64,10 +65,5 @@ public class Tree {
         } else {
             return root.max();
         }
-    }
-
-    public int getHeight() {
-        if (root.getHeight() < 0) return 0;
-        return root.getHeight() - 1;
     }
 }

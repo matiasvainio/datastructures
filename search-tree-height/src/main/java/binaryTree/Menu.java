@@ -15,23 +15,14 @@ public class Menu {
         Tree tree = new Tree();
         tree.insert(25);
         tree.insert(20);
-        System.out.println(tree.getHeight());
+        tree.insert(15);
         tree.insert(27);
-        System.out.println(tree.getHeight());
-        tree.insert(17);
-        System.out.println(tree.getHeight());
-        tree.insert(32);
-        System.out.println(tree.getHeight());
-        tree.insert(29);
-        System.out.println(tree.getHeight());
-        tree.insert(26);
-        System.out.println(tree.getHeight());
         tree.insert(22);
-        System.out.println(tree.getHeight());
+        tree.insert(30);
+        tree.insert(26);
+        tree.insert(32);
+        tree.insert(29);
 
-        // tree.inOrder();
-        System.out.println();
-        // tree.delete(20);
         System.out.println();
         tree.inOrder();
 
