@@ -9,6 +9,7 @@ package binaryTree;
  * @author kamaj
  */
 public class Menu {
+
     public static void main(String[] args) {
 
 //        printMenu();
@@ -17,14 +18,17 @@ public class Menu {
         tree.insert(20);
         tree.insert(27);
         tree.insert(17);
-        tree.insert(32);
-        tree.insert(29);
-        tree.insert(26);
-        tree.insert(22);
+        // tree.insert(32);
+        // tree.insert(29);
+        // tree.insert(26);
+        // tree.insert(22);
+        tree.insert(15);
+        tree.insert(12);
 
-        tree.inOrder();
+
+        // tree.inOrder();
         System.out.println();
-        tree.delete(20);
+        // tree.delete(20);
         System.out.println();
         tree.inOrder();
 
