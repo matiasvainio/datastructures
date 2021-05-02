@@ -33,7 +33,7 @@ public class Node {
         if (left != null) {
             left.inOrder();
         }
-        System.out.println(data +  ", ");
+        System.out.println(data + ", ");
         if (right != null) {
             right.inOrder();
         }
@@ -87,4 +87,5 @@ public class Node {
     public void setRight(Node right) {
         this.right = right;
     }
+
 }
