@@ -10,6 +10,7 @@ public class HashTable {
     }
 
     public void put(HashNode node) {
+        System.out.println("put: " + node);
         int hashedKey = hashKey(node.getKey());
         if (occupied(hashedKey)) {
             int stopIndex = hashedKey;
@@ -28,11 +29,10 @@ public class HashTable {
             node.setKey(hashedKey);
             hashtable[hashedKey] = node;
         }
-
-
     }
 
     public HashNode get(int key) {
+        System.out.println("get key: " + key);
         int hashedKey = hashKey(key);
         return hashtable[hashedKey];
     }
