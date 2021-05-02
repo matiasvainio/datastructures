@@ -2,6 +2,7 @@
 
 ![img](pics/hashtable.png)
 
+## Avaimen lisääminen ja yhteentörmäysten hallinta
 ```
     public void put(HashNode node) {
         System.out.println("put: " + node);
@@ -23,5 +24,14 @@
             node.setKey(hashedKey);
             hashtable[hashedKey] = node;
         }
+    }
+```
+
+## Avaimen hakeminen
+```
+    public HashNode get(int key) {
+        System.out.println("get key: " + key);
+        int hashedKey = hashKey(key);
+        return hashtable[hashedKey];
     }
 ```
